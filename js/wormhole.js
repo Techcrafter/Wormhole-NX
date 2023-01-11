@@ -17,7 +17,7 @@ class Wormhole {
     };
 
     this.ctx = ctx;
-    this.speed = 1.09;
+    this.speed = 1.13;
 
     this.board = new Board(ctx, this.speed);
     this.player = new Player(ctx);
@@ -33,9 +33,6 @@ class Wormhole {
     this.renderPreview = this.renderPreview.bind(this);
     this.renderElements = this.renderElements.bind(this);
     this.renderGame = this.renderGame.bind(this);
-
-    this.audio = document.getElementById("game-audio");
-    this.audio.load();
   }
 
   play() {
@@ -85,7 +82,6 @@ class Wormhole {
       }
     });
 
-    this.audio.play();
     this.startScore();
     this.renderGame();
   }
@@ -146,7 +142,6 @@ class Wormhole {
     renderElements();
 
     if (player.shields <= 0) {
-      this.audio.pause();
       const score = document.getElementById("player-score");
       score.innerHTML = this.score;
       const scoreboardContainer = document.getElementById(

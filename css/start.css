@@ -5,7 +5,7 @@
   border: 5px solid rgb(200, 200, 200);
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 60%;
   justify-content: space-around;
   position: absolute;
   width: 40%;
@@ -15,7 +15,7 @@
 .start-menu h2 {
   color: #21ecff;
   font-family: "Press Start 2P", cursive;
-  font-size: 30px;
+  font-size: 40px;
   text-shadow: 3px 3px black;
   margin-top: 0;
 }
@@ -23,25 +23,25 @@
 .start-menu h3 {
   color: black;
   font-family: "Press Start 2P", cursive;
-  font-size: 13px;
+  font-size: 20px;
   margin: 30px 0 0 0;
 }
 
 .start-menu p {
   color: black;
   font-family: "Press Start 2P", cursive;
-  font-size: 12px;
-  margin: 0 15px;
+  font-size: 15px;
+  margin: 10px;
   text-align: center;
 }
 
 #instructions:after {
-  content: "Press left and right on your screen to navigate";
+  content: "Use left and right on the D-Pad to navigate";
 }
 
 @media only screen and (min-width: 1025px) {
   #instructions:after {
-    content: "Press left and right on your keyboard to navigate";
+    content: "Use left and right on the D-Pad to navigate";
   }
 }
 

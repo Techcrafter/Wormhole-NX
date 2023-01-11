@@ -3,6 +3,7 @@ import Wormhole from "./wormhole";
 document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("wormhole");
   const ctx = canvas.getContext("2d");
+  ctx.scale(1.2, 1.2);
 
   let game = new Wormhole(ctx);
   game.renderPreview();
@@ -12,11 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const startMenu = document.getElementById("start-menu");
   const playAgain = document.getElementById("play-again");
   const startGame = document.getElementById("start-game");
-  const muteButton = document.getElementById("mute");
-  const gameAudio = document.getElementById("game-audio");
-
-  gameAudio.autoplay = false;
-
+  
   playAgain.addEventListener("click", () => {
     scoreboardContainer.className = "scoreboard-container";
     scoreboard.className = "scoreboard";
@@ -29,12 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
     playGame();
   });
 
-  muteButton.addEventListener("click", () => {
-    muteButton.className = muteButton.className === "mute" ? "mute on" : "mute";
-    gameAudio.muted = muteButton.className === "mute on" ? true : false;
-  });
-
   const playGame = () => {
+    if(document.documentElement.requestFullscreen)  // switch page to fullscreen
+    {
+      document.documentElement.requestFullscreen();
+    }
+    else if(document.documentElement.webkitRequestFullscreen)
+    {
+      document.documentElement.webkitRequestFullscreen();
+    }
+    else if(document.documentElement.msRequestFullscreen)
+    {
+      document.documentElement.msRequestFullscreen();
+    }
+    
     game = new Wormhole(ctx);
 
     game.play();

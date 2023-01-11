@@ -1,6 +1,8 @@
-# Wormhole
+# Wormhole NX
 
-[Live Link](https://masonanders.github.io/Wormhole/)
+An optimized version of Wormhole by [masonanders](https://github.com/masonanders) for the NX handheld console. No need for custom firmware! Simply [enable the 'secret' browser](https://switchbru.com/dns) and navigate to 'https://techcrafter.github.io/Wormhole-NX'. If you like the game, you can add the URL to your favorite links for easier access.
+
+## [Original project](https://github.com/masonanders/Wormhole)
 
 Navigate your way through a wormhole at speeds nearing that of light while you avoid pockets of strange energy that would surely be the end of you should you collide with too many along the way.
 
